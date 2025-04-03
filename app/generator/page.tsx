@@ -57,6 +57,10 @@ export default function GeneratorPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState<string>("Developer")
 
+  const placeholderText = `John Doe
+Jane Smith
+Alex Johnson`;
+
   // Emoji categories
   const emojiCategories = {
     Developer: ["👨‍💻", "👩‍💻", "🧑‍💻", "⌨️", "🖥️", "💻", "🚀", "⚡", "🔥", "🐞", "🐛", "🧠", "🤖", "👾"],
@@ -223,7 +227,7 @@ export default function GeneratorPage() {
                       <Textarea
                         id="names"
                         className="min-h-[100px] mt-2"
-                        placeholder="John Doe&#10;Jane Smith&#10;Alex Johnson"
+                        placeholder={placeholderText}
                         value={nameInput}
                         onChange={handleNamesInput}
                       />
@@ -245,7 +249,7 @@ export default function GeneratorPage() {
                       <Textarea
                         id="notes"
                         className="min-h-[60px] mt-2"
-                        placeholder="Bitte so zurück lassen wie vorgefunden"
+                        placeholder="Bitte so hinterlassen wie vorgefunden"
                         value={notesInput}
                         onChange={handleNotesInput}
                       />
