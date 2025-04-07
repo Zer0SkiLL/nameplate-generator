@@ -31,8 +31,11 @@ export default function GeneratorPage() {
   const router = useRouter()
   const isMobile = useMobile()
 
+  // Default logo path
+  const defaultLogoPath = "/finstar-favicon.png"
+
   const [logoFile, setLogoFile] = useState<File | null>(null)
-  const [logoPreview, setLogoPreview] = useState<string>("/default-logo.png")
+  const [logoPreview, setLogoPreview] = useState<string>(defaultLogoPath)
   const [nameplates, setNameplates] = useState<Nameplate[]>([])
   const [nameInput, setNameInput] = useState("")
   const [jobTitleInput, setJobTitleInput] = useState("")
@@ -218,7 +221,7 @@ Alex Johnson`;
                         </div>
                       </div>
                       <p className="text-xs text-gray-500 mt-1">
-                        Using default logo. Future versions will allow selection from a shared folder.
+                        Using custom default logo. Upload a new one to override.
                       </p>
                     </div>
 

@@ -44,6 +44,10 @@ export function NameplatePreview({
     occupied: "Occupied by Guest",
   }
 
+  // Default logo path
+  const defaultLogoPath = "/finstar-favicon.png"
+  const defaultLogoAlt = "Default Logo"
+
   return (
     <div
       className={`border rounded-lg overflow-hidden shadow-sm print:shadow-none ${compact ? "max-w-full" : ""}`}
@@ -59,7 +63,7 @@ export function NameplatePreview({
         style={{ backgroundColor: headerBackgroundColor }}
       >
         <div className={`${compact ? "w-12 h-12" : "w-16 h-16"} flex-shrink-0 overflow-hidden`}>
-          <img src={logoUrl || "/default-logo.png"} alt="Company logo" className="w-full h-full object-contain" />
+        <img src={logoUrl || defaultLogoPath} alt= {defaultLogoAlt} className="w-full h-full object-contain" />
         </div>
         <div className="ml-3 flex-1">
           <h3
