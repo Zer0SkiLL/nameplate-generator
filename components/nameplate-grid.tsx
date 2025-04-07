@@ -37,7 +37,7 @@ export function NameplateGrid({ nameplates, logoUrl, customization, itemsPerPage
     <div className="space-y-12 print:space-y-0">
       {pages.map(({ pageIndex, pageNameplates }) => (
         <div key={pageIndex} className="page-break bg-white border rounded-lg p-6 print:p-0 print:border-0">
-          <div className="grid grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 gap-8 w-full">
             {pageNameplates.map((nameplate, nameplateIndex) => (
               <div key={`${pageIndex}-${nameplateIndex}`} className="print:break-inside-avoid">
                 <NameplatePreview

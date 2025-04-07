@@ -74,7 +74,7 @@ export default function PreviewPage() {
       const pageHeight = 297
 
       // Calculate nameplate dimensions (full width, 1/5 height with margins)
-      const margin = 10 // 10mm margin
+      const margin = 5 // 10mm margin
       const nameplateWidth = pageWidth - margin * 2
       const nameplateHeight = (pageHeight - margin * 2) / 4 - 5 // 4 per page with small gap
 
@@ -368,7 +368,9 @@ export default function PreviewPage() {
 
           // Add to PDF
           const imgData = canvas.toDataURL("image/png")
-          pdf.addImage(imgData, "PNG", margin, yPosition, nameplateWidth, nameplateHeight)
+          pdf.addImage(imgData, "PNG", 0, 0, pageWidth, canvas.height * (pageWidth / canvas.width))
+
+          // pdf.addImage(imgData, "PNG", margin, yPosition, nameplateWidth, nameplateHeight)
         }
 
         // Clean up
