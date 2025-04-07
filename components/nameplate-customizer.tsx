@@ -161,7 +161,7 @@ export function NameplateCustomizer({ customization, customIcon, onIconChange, o
         <Slider
           id="fontSize"
           min={12}
-          max={40}
+          max={48}
           step={1}
           value={[fontSize]}
           onValueChange={(value) => onChange("fontSize", value[0])}
